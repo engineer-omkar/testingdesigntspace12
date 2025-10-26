@@ -134,6 +134,7 @@ body {
   width: 415px;
   border-radius: 0px;
 }
+}
 .text {
   max-width: 560px;
   text-align: left;
@@ -606,3 +607,4 @@ body.no-scroll {
   }
 
 }
+
