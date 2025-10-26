@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="land.css" />
+</head>
+<body>
+<header class="header">
+    <div class="container">
+      <a href="index.html"><img src="image/logo.png" alt="Designspace Logo" class="logo"></a>
+      <!-- Desktop nav -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="abut.html">About Us</a>
+        <a href="aboutt.html">Services</a>
+        <a href="grid.html">Our Work</a>
+      </nav>
+
+      <!-- Desktop buttons -->
+      <div class="buttons">
+        <a href="land.html"><button class="btn apply">Apply</button></a>
+        <a href="land2.html"><button class="btn create">Creator</button></a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="menu-icon" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="menu-header">
+      <img src="image/logo.png" alt="Designspace Logo" class="logo">
+      <button class="close-icon" id="mobileClose">&times;</button>
+    </div>
+
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="abut.html">About Us</a>
+      <a href="aboutt.html">Services</a>
+      <a href="grid.html">Our Work</a>
+    </nav>
+
+    <div class="mobile-buttons">
+      <a href="land.html"><button class="btn apply">Apply</button></a>
+      <a href="land2.html"><button class="btn create">Creator</button></a>
+    </div>
+  </div>
+
+  <!-- Combined hero image and form section -->
+  <section class="hero-form">
+    <div class="hero-image">
+      <img src="image\work.png" alt="Let’s Work Together" />
+    </div>
+    <div class="contact-form">
+    <form action="https://formspree.io/f/xdkenrad"
+  method="POST">
+       <input type="text" name="Your Name" placeholder="Your Name" required>
+      <input type="email" name="Your Email" placeholder="Your Email" required>
+      <input type="text" name="Contact Number" placeholder="Contact Number" required>
+      <input type="text" name="Address" placeholder="Address" required>
+      <textarea placeholder="Your Message" name="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+   <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+     <img src="image\logo.png" alt="Designspace Logo" class="footer-logo">
+      <p>+91 8421654637 | +91 9561029006</p>
+      <div class="change2"><p>designspace@gmail.com</p></div>
+      <p>© Designspace. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Terms</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Imprint</a>
+      <div class="social-icons">
+        <a href=https://www.instagram.com/designtspace?igsh=MXRwcXBtbGxobnI4cw==><img src="image\instagram.svg" alt="Instagram"></a>
+        <a href=https://www.facebook.com/share/151WXz3FhE/?mibextid=wwXIfr><img src="image\facebook.svg"></a>
+        <a href="https://www.behance.net/tanmaysurse"><img src="image\behance.svg" alt="Behance"></a>
+        <a href= "https://in.linkedin.com/in/tanmay-surse-7a1866214"><img src="image\linkedin.svg" alt="LinkedIn"></a>
+     </div>
+    </div>
+  </div>
+</footer>
+   <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.classList.add('no-scroll');
+    });
+
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-nav a, .mobile-buttons .btn').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  </script>
+</body>
+</html>
