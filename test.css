@@ -131,7 +131,7 @@ body {
 }
 @media (max-width: 600px) {
   .founder-img {
-  width: 95px;
+  width: 315px;
   border-radius: 0px;
 }
 }
@@ -607,6 +607,7 @@ body.no-scroll {
   }
 
 }
+
 
 
 
