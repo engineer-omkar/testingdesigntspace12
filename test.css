@@ -129,7 +129,11 @@ body {
   width: 475px;
   border-radius: 0px;
 }
-
+@media (max-width: 600px) {
+  .founder-img {
+  width: 415px;
+  border-radius: 0px;
+}
 .text {
   max-width: 560px;
   text-align: left;
@@ -600,4 +604,5 @@ body.no-scroll {
   .info-image img {
     max-height: 180px;
   }
+
 }
