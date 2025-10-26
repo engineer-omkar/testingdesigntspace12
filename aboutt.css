@@ -1,0 +1,529 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/MyCustomFont.otf') format('opentype'),
+       url('fonts/faint.otf') format('opentype'),
+       url('fonts/trial.otf') format('opentype'),
+       url('fonts/CustomFont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  max-height: 25px;
+  width: auto;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  font-family: 'MyCustomFont', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.buttons .btn {
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.btn.apply {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn.create {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: #D79757;
+  color: #000;
+  border: none;
+}
+/* Services Section */
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: transparent; /* Set background to transparent */
+}
+
+.services h2 {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.info{
+font-family: 'MyCustomFont', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color:#ccc;
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-item {
+  background-color: transparent; /* Remove background color */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-logo {
+  max-width: 115px; /* Adjust logo size as needed */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-family: 'MyCustomFont', sans-serif;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Make grid responsive */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(1, 1fr); /* Two columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* One column for very small screens */
+  }
+}
+
+/* Our Work Section */
+.our-work {
+  margin-top: 100px;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #000;
+}
+
+.our-work h2 {	
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+.change1{
+font-family: 'MyCustomFont', sans-serif;
+font-size: 1.5rem;
+margin-bottom: -25px;
+}
+.our-work p {
+  font-family: 'MyCustomFont', sans-serif;
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 80px;
+}
+
+.work-container {
+  display:flex;
+  align-items: center;
+  justify-content: right;
+  gap: 50px;
+  flex-wrap: wrap;
+  background-color: #222;
+  padding: 0px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, #AD7946, #000);
+}
+
+.work-content {
+  text-align: left;
+  max-width: 400px;
+  color: #fff;
+  margin-right: 80px;
+  margin-left: 140px;
+}
+
+.work-content h3 {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.navigation button {
+  background-color: #AD7946;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.logo-sign{
+max-height:45px;
+width: auto;
+}
+.work-image img {
+  max-width: 800px;
+  border-radius: 2px;
+}
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #000;
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+.contact h2 {
+  font-size: 5rem;
+  color: #AD7946;
+  margin-bottom: 5px;
+}
+@media (max-width: 600px) {
+  .contact h2 {
+    font-size: 1.98rem;   /* smaller for phones */
+  }
+}
+.contact p {
+  color: #ccc;
+  font-size: 2rem;
+  margin-bottom: 65px;
+}
+@media (max-width: 600px) {
+  .contact p {
+    font-size: 1rem;   /* smaller for phones */
+  }
+}
+.contact-form {
+  background: linear-gradient(to bottom, #AD7946, #000);
+  padding: 30px;
+  border-radius: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items:center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 35%;
+  max-width:500px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  text-align:left;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #AD7946;
+  max-width:500px;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align:center;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  font-family: 'MyCustomFont', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  color: #ccc;
+  text-align: left;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right a {
+  color: #AD7946;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive footer/work */
+@media (max-width: 768px) {
+  .work-container {
+    flex-direction: column;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+}
+
+/* ==============================
+   MOBILE MENU
+   ============================== */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Fullscreen mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateY(0);
+}
+
+.mobile-menu .menu-header {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu .menu-header .logo {
+  max-height: 40px;
+}
+
+.close-icon {
+  font-size: 36px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile nav links */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.mobile-nav a {
+   font-family: 'MyCustomFont', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Mobile buttons */
+.mobile-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 70%;
+  align-items: center;
+}
+
+.mobile-buttons .btn {
+  width: 100%;
+  font-size: 1.1rem;
+padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.btn.apply {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn.create {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: #D79757;
+  color: #000;
+  border: none;
+}
+/* Prevent scrolling when menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Show hamburger & hide desktop nav/buttons on mobile */
+@media (max-width: 768px) {
+  .nav, .buttons {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+/* Desktop: force line breaks */
+@media (min-width: 768px) {
+  .service-item p .break::before {
+    content: "\A";    /* line break */
+    white-space: pre; /* keep the break */
+  }
+}
+
+/* Mobile: keep it in one line (no forced breaks) */
+@media (max-width: 767px) {
+  .service-item p .break::before {
+    content: " ";  /* replace break with space */
+  }
+}
+.info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #AD7946;   /* background color */
+  border: 0px ;
+  border-radius: 0px;
+  padding: 0px;
+  max-width: 1500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: linear-gradient(to bottom, #AD7946, #000);
+}
+
+/* Left Text */
+.info-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-right: 20px;
+  margin-left: 80px;
+  color: #0d47a1;
+}
+
+/* Right Image */
+.info-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  max-height: 1400px;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+/* Responsive scaling for mobile */
+@media (max-width: 600px) {
+  .info-box {
+    padding: 12px;
+  }
+  .info-text {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .info-image img {
+    max-height: 180px;
+  }
+}

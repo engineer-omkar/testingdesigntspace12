@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designtspace</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+   <header class="header">
+    <div class="container">
+      <a href="index.html"><img src="image/logo.png" alt="Designspace Logo" class="logo"></a>
+
+      <!-- Desktop nav -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="abut.html">About Us</a>
+        <a href="aboutt.html">Services</a>
+        <a href="grid.html">Our Work</a>
+      </nav>
+
+      <!-- Desktop buttons -->
+      <div class="buttons">
+        <a href="land.html"><button class="btn apply">Apply</button></a>
+        <a href="land2.html"><button class="btn create">Creator</button></a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="menu-icon" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="menu-header">
+      <img src="image/logo.png" alt="Desigtnspace Logo" class="logo">
+      <button class="close-icon" id="mobileClose">&times;</button>
+    </div>
+
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="abut.html">About Us</a>
+      <a href="aboutt.html">Services</a>
+      <a href="grid.html">Our Work</a>
+    </nav>
+
+    <div class="mobile-buttons">
+      <a href="land.html"><button class="btn apply">Apply</button></a>
+      <a href="land2.html"><button class="btn create">Creator</button></a>
+    </div>
+  </div>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero">
+        <img src="image/bgimage.jpg" alt="Background Image" class="bg-img">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>About Desigtnspace</h1>
+             <div class="about-containers">
+            <div class="content1"><p>At Designtspace, creativity meets strategy. We are a dynamic, full-service agency specializing in Design, Branding, Advertising, Digital Marketing, Website Design, and Print Media. Our mission is to transform your ideas into impactful visuals and narratives that resonate with your audience.</p></div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="choose"><h2>Why Choose Us?</h2></div>
+        <div class="choose1"><color="white" ul> At Designtspace we pridly overslave on
+            <li><strong>Creativity:</strong> Pushing boundaries to deliver unique designs and concepts.</li>
+            <li><strong>Innovation:</strong> Staying ahead of industry trends to bring fresh ideas to life.</li>
+            <li><strong>Collaboration:</strong> Working closely with you to understand your goals and vision.</li>
+            <li><strong>Results-Driven:</strong> Combining creativity with analytics to ensure success.</li>
+        </ul></div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="who-we-are">
+        <div class="text1"><h2>Who We Are</h2></div>
+        <div class="text"><p>Designtspace is built on the belief that every brand has a unique story to<br> tell. With a team of passionate designers, strategists, and marketers, we<br> craft innovative solutions tailored to elevate your business. Whether you're<br> a startup or an established enterprise, we deliver compelling results that<br> make you stand out in today's competitive market.</p></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>“Let’s Work Together”</h2>
+  <p>"Ready to elevate your brand?<br> Reach out to Desigtnspace to discuss <br> your project needs and goals."</p>
+
+  <div class="contact-form">
+    <h3>Get in Touch</h3>
+    <form action="https://formspree.io/f/xdkenrad"
+  method="POST">
+      <input type="text" name="Your Name" placeholder="Your Name" required>
+      <input type="email" name="Your Email" placeholder="Your Email" required>
+      <input type="text" name="Contact Number" placeholder="Contact Number" required>
+      <input type="text" name="Address" placeholder="Address" required>
+      <textarea placeholder="Your Message" name="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="image\logo.png" alt="Desigtnspace Logo" class="footer-logo">
+      <p>+91 8421654637 | +91 9561029006</p>
+      <div class="change2"><p>designspace@gmail.com</p></div>
+      <p>© Designspace. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Terms</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Imprint</a>
+      <div class="social-icons">
+        <a href=https://www.instagram.com/designtspace?igsh=MXRwcXBtbGxobnI4cw==><img src="image\instagram.svg" alt="Instagram"></a>
+        <a href=https://www.facebook.com/share/151WXz3FhE/?mibextid=wwXIfr><img src="image\facebook.svg"></a>
+        <a href="https://www.behance.net/tanmaysurse"><img src="image\behance.svg" alt="Behance"></a>
+        <a href= "https://in.linkedin.com/in/tanmay-surse-7a1866214"><img src="image\linkedin.svg" alt="LinkedIn"></a>
+     </div>
+    </div>
+  </div>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.classList.add('no-scroll');
+    });
+
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-nav a, .mobile-buttons .btn').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  </script>
+</body>
+</html>

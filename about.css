@@ -1,0 +1,490 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/MyCustomFont.otf') format('opentype'),
+  src: url('fonts/CustomFont.otf') format('opentype'),
+  src: url('fonts/trial.otf') format('opentype'),
+  src: url('fonts/CustomFont.otf') format('opentype'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MyCustomFont', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  max-height: 25px;
+  width: auto;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  font-family: 'MyCustomFont', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.buttons .btn {
+  padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.btn.apply {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn.create {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: #AD7946;
+  color: #000;
+  border: none;
+}
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Fullscreen mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+  display: flex;
+  transform: translateY(0);
+}
+
+.mobile-menu .menu-header {
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu .menu-header .logo {
+  max-height: 40px;
+}
+
+.close-icon {
+  font-size: 36px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile nav links */
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.mobile-nav a {
+   font-family: 'MyCustomFont', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Mobile buttons */
+.mobile-buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 70%;
+  align-items: center;
+}
+
+.mobile-buttons .btn {
+  width: 100%;
+  font-size: 1.1rem;
+padding: 10px 25px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.btn.apply {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn.create {
+  font-family: 'MyCustomFont', sans-serif;
+  background-color: #D79757;
+  color: #000;
+  border: none;
+}
+/* Prevent scrolling when menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Show hamburger & hide desktop nav/buttons on mobile */
+@media (max-width: 768px) {
+  .nav, .buttons {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Hero Section */
+
+
+/* Hero Section with Background Image */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    overflow: hidden;
+padding: 50px 10%;
+}
+.about-containers {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    width: 75%;
+    position:relative;
+    z-index: 1;
+}
+@media (max-width: 600px) {
+  .about-containers {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    position:relative;
+    z-index: 1;
+  }
+}
+.content1{
+font-size:1rem;
+}
+/* Background Image */
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Dark Overlay for Readability */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+    z-index: 0;
+}
+
+/* Content on Top of Image */
+.content {
+    position: relative;
+    z-index: 1;
+}
+.content h1 {
+    font-size: 1.5em;
+    color: #FFFFFF;
+font-family: 'MyCustomFont', sans-serif;
+margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  .content1 p{
+ font-size:1rem;
+  }
+}
+/* Sections */
+.why-choose, .who-we-are, .contact {
+    padding: 50px 10%;
+    text-align: left;
+}
+.why-choose h2, .who-we-are h2, .contact h2 {
+    color: #AD7946;
+    margin-bottom: 10px;
+}
+
+/* Why Choose Us */
+.why-choose ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose ul li {
+    font-size: 18px;
+    padding: 8px 0;
+}
+.choose{
+font-family: 'MyCustomFont', sans-serif;
+  font-size: 1.2rem;
+  color: #AD7946;
+  margin-top: -200px;
+position: relative;
+    z-index: 1;
+}
+@media (max-width: 600px) {
+  .choose{
+ margin-top: 15px;
+  }
+}
+.choose1{
+font-family: 'MyCustomFont', sans-serif;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 20px;
+position: relative;
+    z-index: 1;
+}
+@media (max-width: 600px) {
+  .choose1{
+ font-size:1rem;
+  }
+}
+.text1{
+ font-family: 'MyCustomFont', sans-serif;
+  font-size: 1.2rem;
+  color: #AD7946;
+  margin-top: 20px;
+}
+.text{
+ font-family: 'MyCustomFont', sans-serif;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .text{
+ font-size:1rem;
+  }
+}
+.lets{
+text-align: center;
+    color: orange;
+font-size: 2.5em;
+}
+.info{
+text-align: center;
+    color: white;
+font-size: 2em;
+margin-top: 1px;
+}
+.rich{
+text-align: center;
+    color: white;
+font-size: 1.2em;
+margin-top: -20px;
+}
+.info1{
+text-align: center;
+    color: white;
+font-size: 1em;
+margin-top: -20px;
+margin-bottom: 50px;
+}
+
+/* Contact Form */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #000;
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+.contact h2 {
+  font-size: 5rem;
+  color: #AD7946;
+  margin-bottom: 5px;
+}
+@media (max-width: 600px) {
+  .contact h2 {
+    font-size: 1.98rem;   /* smaller for phones */
+  }
+}
+.contact p {
+  color: #ccc;
+  font-size: 2rem;
+  margin-bottom: 65px;
+}
+@media (max-width: 600px) {
+  .contact p {
+    font-size: 1rem;   /* smaller for phones */
+  }
+}
+.contact-form {
+  background: linear-gradient(to bottom, #AD7946, #000);
+  padding: 30px;
+  border-radius: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items:center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 35%;
+  max-width:500px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  text-align:left;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #AD7946;
+  max-width:500px;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align:center;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.change2{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.footer-content {
+  font-family: 'MyCustomFont', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  color: #ccc;
+  text-align: left;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right a {
+  color: #AD7946;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-container {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+}

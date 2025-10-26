@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Designspace</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="image/logo.png" alt="Designspace Logo" class="logo">
+
+      <!-- Desktop nav -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="abut.html">About Us</a>
+        <a href="design.html">Services</a>
+        <a href="grid.html">Our Work</a>
+      </nav>
+
+      <!-- Desktop buttons -->
+      <div class="buttons">
+        <a href="land.html"><button class="btn apply">Apply</button></a>
+        <a href="land2.html"><button class="btn create">Creator</button></a>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="menu-icon" id="menuToggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="menu-header">
+      <img src="image/logo.png" alt="Designspace Logo" class="logo">
+      <button class="close-icon" id="mobileClose">&times;</button>
+    </div>
+
+    <nav class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="abut.html">About Us</a>
+      <a href="design.html">Services</a>
+      <a href="grid.html">Our Work</a>
+    </nav>
+
+    <div class="mobile-buttons">
+      <a href="land.html"><button class="btn apply">Apply</button></a>
+      <a href="land2.html"><button class="btn create">Creator</button></a>
+    </div>
+  </div>
+  <section class="services">
+  <h2>Our Services</h2>
+  <div  class="info"><p>Designspace offers creative, custom design solutions that elevate your brand.<br>We specialize in  logo design, web development, and user-centered experiences.</p></div>
+  <div class="service-grid">
+    <div class="service-item">
+      <img src="image\branding.png" alt="Branding & Identity" class="service-logo">
+      <h3>Branding & Identity</h3>
+      <p>crafting identities that are both impactful<br> & memorable, including, logo design,<br> brand guidence, and messaging </p>
+    </div>
+    <div class="service-item">
+      <img src="image\advertising.png" alt="Advertising" class="service-logo">
+      <h3>Advertising</h3>
+      <p>Crafting compelling Ad campaigns for<br> digital and print that capture attention<br> and drive results.</p>
+    </div>
+    <div class="service-item">
+      <img src="image\digital.png" alt="Digital Marketing" class="service-logo">
+      <h3>Digital Marketing</h3>
+      <p>Engaging your audiance where they are<br> through tailored social media statergies,<br> SEO & PPC compaigns.</p>
+    </div>
+    <div class="service-item">
+      <img src="image\design.png" alt="Website Design" class="service-logo">
+      <h3>Website Design</h3>
+      <p>Custom, responsive website design that<br> prioritize user experience and reflect your<br> brand's value.</p>
+    </div>
+    <div class="service-item">
+      <img src="image\print.png" alt="Print Media" class="service-logo">
+      <h3>Print Media</h3>
+      <p>From brochures to billboard, we design<br> print materials that communicate your<br> message with style and clarity.</p>
+    </div>
+    <div class="service-item">
+      <img src="image\cosulting.png" alt="Consulting & Strategy" class="service-logo">
+      <h3>Consulting & Strategy</h3>
+      <p>Expert guidence to craft & implement<br> impactful design & buiseness stratergies<br> from branding to digital transformation<br> and market positioning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>“Let’s Work Together”</h2>
+  <p>"Ready to elevate your brand?<br> Reach out to Designspace to discuss <br> your project needs and goals."</p>
+
+  <div class="contact-form">
+    <h3>Get in Touch</h3>
+    <form action="https://formspree.io/f/xdkenrad"
+  method="POST">
+      <input type="text" name="Your Name" placeholder="Your Name" required>
+      <input type="email" name="Your Email" placeholder="Your Email" required>
+      <input type="text" name="Contact Number" placeholder="Contact Number" required>
+      <input type="text" name="Address" placeholder="Address" required>
+      <textarea placeholder="Your Message" name="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="image\logo.png" alt="Designspace Logo" class="footer-logo">
+      <p>+91 8421654637 | +91 9561029006</p>
+      <p>designspace@gmail.com</p>
+      <p>© Designspace. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Terms</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Imprint</a>
+      <div class="social-icons">
+        <a href=https://www.instagram.com/designtspace?igsh=MXRwcXBtbGxobnI4cw==><img src="image\instagram.svg" alt="Instagram"></a>
+        <a href=https://www.facebook.com/share/151WXz3FhE/?mibextid=wwXIfr><img src="image\facebook.svg"></a>
+        <a href="https://www.behance.net/tanmaysurse"><img src="image\behance.svg" alt="Behance"></a>
+        <a href= "https://in.linkedin.com/in/tanmay-surse-7a1866214"><img src="image\linkedin.svg" alt="LinkedIn"></a>
+     </div>
+    </div>
+  </div>
+</footer>
+   <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.classList.add('no-scroll');
+    });
+
+    mobileClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-nav a, .mobile-buttons .btn').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  </script>
+</body>
+</html>
