@@ -354,7 +354,29 @@ width: auto;
   color: #fff;
   text-align:left;
 }
-
+@media (max-width: 600px) {
+   .contact-form input,
+  .contact-form textarea {width: 60%;
+  max-width:500px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  text-align:left;
+  }
+}@media (max-width: 600px) {
+   .contact-form input,
+  .contact-form textarea {width: 60%;
+  max-width:500px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  text-align:left;
+  }
+}
 .contact-form textarea {
   height: 100px;
 }
@@ -613,6 +635,7 @@ body.no-scroll {
   }
 
 }
+
 
 
 
