@@ -100,7 +100,7 @@ body {
 /* Phone only: decrease text size */
 @media (max-width: 600px) {
   .hero p {
-    font-size: 1.3rem;   /* smaller for phones */
+    font-size: 1rem;   /* smaller for phones */
   }
 }
 
@@ -607,6 +607,7 @@ body.no-scroll {
   }
 
 }
+
 
 
 
