@@ -635,6 +635,10 @@ body.no-scroll {
   }
 
 }
+a[href^="tel"] {
+    color: white !important;
+    text-decoration: none !important;
+}
 
 
 
