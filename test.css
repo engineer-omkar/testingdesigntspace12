@@ -110,7 +110,7 @@ body {
   font-family: 'MyCustomFont', sans-serif;
   padding: 50px 20px;
   text-align: center;
-  margin-top: -20px;
+  margin-top: -95px;
 }
 
 .about h2 {
@@ -608,6 +608,7 @@ body.no-scroll {
   }
 
 }
+
 
 
 
