@@ -636,7 +636,7 @@ body.no-scroll {
 
 }
 a[href^="tel"] {
-    color: #ccc !important;
+    color: white !important;
     text-decoration: none !important;
 }
 
