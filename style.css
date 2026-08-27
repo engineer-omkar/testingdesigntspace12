@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+/* --- OVERLAPPING SCROLL ANIMATION --- */
+.project-section {
+    height: 100vh;
+    width: 100%;
+    position: sticky; /* Pins the section to the top */
+    top: 0;
+    box-shadow: 0 -20px 50px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+
+.project-wrapper {
+    display: block; /* Makes the whole <a> tag clickable */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    z-index: 10;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.project-title span {
+    font-size: 1.2rem;
+    font-weight: 300;
+    display: block;
+    margin-top: 10px;
+}
+
+.project-wrapper:hover .project-title {
+    transform: translate(-50%, -55%); /* Slight lift on hover */
+}
+
+.main-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}

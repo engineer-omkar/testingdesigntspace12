@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: sans-serif;
+}
+
+.back-btn {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    z-index: 100;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.vertical-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.stack-img {
+    width: 100%;
+    height: 100vh; /* Keeps each image full screen */
+    object-fit: cover;
+}
+/* --- PAGE TRANSITIONS --- */
+
+/* 1. Fade in automatically when the page loads */
+body {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 2. Class added by JavaScript right before leaving the page */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+/* --- EXISTING CSS CONTINUED --- */
+
+/* --- NEXT PROJECT BANNER --- */
+.next-project {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Takes up 60% of the screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+    margin-top: -5px; /* Removes any tiny gaps between images */
+}
+
+/* Dark overlay so the text is readable */
+.next-project::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: background 0.4s ease;
+}
+
+.next-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    color: white;
+    transform: translateY(0);
+    transition: transform 0.4s ease;
+}
+
+.next-content span {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+.next-content h2 {
+    font-size: 4rem;
+    margin-top: 10px;
+    text-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+
+.next-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+/* --- HOVER EFFECTS --- */
+.next-project:hover::before {
+    background: rgba(0, 0, 0, 0.3); /* Lightens up on hover */
+}
+
+.next-project:hover .next-bg {
+    transform: scale(1.05); /* Slight zoom on the image */
+}
+
+.next-project:hover .next-content {
+    transform: translateY(-10px); /* Text floats up slightly */
+}
